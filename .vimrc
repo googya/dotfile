@@ -79,8 +79,8 @@ Bundle 'lukerandall/haskellmode-vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'slim-template/slim'
 Bundle 'spolu/dwm.vim'
-
-
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'Lokaltog/powerline'
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
