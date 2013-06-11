@@ -1,0 +1,34 @@
+export JBOSS_HOME=/usr/local/jboss/jboss-6.1.0.Final/
+#export JAVA_HOME=/Library/Java/Home
+
+
+export EDITOR="mate -w"
+export VISUAL="mate -w"
+export SVN_EDITOR="mate -w"
+# if [ -f `brew --prefix`/etc/bash_completion ]; then
+#     . `brew --prefix`/etc/bash_completion
+# fi ]
+#export PROMPT="%n@%.: "
+alias mou='open /Applications/Mou.app/'
+alias ls='ls -Gp'
+export PATH=/usr/local/sbin:/usr/local/share/python:$PATH
+
+export PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
+
+# if [ -f $(brew --prefix)/etc/bash_completion ]; then
+#     . $(brew --prefix)/etc/bash_completion
+# 	
+# 	if [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
+# 	           .  $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+# 	fi 
+# fi
+
+if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+   # First try to load from a user install
+   source "$HOME/.rvm/scripts/rvm"
+elif [[ -s "/usr/local/rvm/scripts/rvm" ]] ; then
+   # Then try to load from a root install
+   source "/usr/local/rvm/scripts/rvm"
+else
+   printf "ERROR: An RVM installation was not found.\n"
+fi
