@@ -27,7 +27,7 @@ set autoread		" auto read when file is changed from outside
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
-set rtp+=~/dotfiles/.vim/vundle.git/
+set rtp+=~/dotfiles/.vim/bundle/vundle/
 call vundle#rc()
 
 "Bundle 'vim-scripts/Smart-Parentheses'
