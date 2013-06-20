@@ -79,7 +79,8 @@ Bundle 'lukerandall/haskellmode-vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'slim-template/slim'
 Bundle 'spolu/dwm.vim'
-
+Bundle 'xolox/vim-easytags'
+Bundle 'xolox/vim-misc'
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
