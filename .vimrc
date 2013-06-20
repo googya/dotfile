@@ -61,7 +61,7 @@ Bundle 'Lokaltog/vim-powerline'
 "Bundle 'myusuf3/numbers.vim'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Townk/vim-autoclose'
-Bundle 'rson/vim-conque'
+"Bundle 'rson/vim-conque'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'vim-scripts/VimClojure'
 Bundle 'vim-scripts/Vim-R-plugin'
@@ -81,7 +81,8 @@ Bundle 'slim-template/slim'
 Bundle 'spolu/dwm.vim'
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
-
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'Lokaltog/powerline'
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 

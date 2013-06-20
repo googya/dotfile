@@ -1,0 +1,7 @@
+export PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:~/.cabal/bin:/usr/local/share/npm/bin
+alias unshort='/usr/bin/ruby /Users/leslie/unshorten.rb'
+#alias node='env NODE_NO_READLINE=1 rlwrap -ppurple node'
+
+[[ -s ~/.bashrc ]] && source ~/.bashrc
+[[ -s ~/.profile ]] && source ~/.profile
+
