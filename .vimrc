@@ -82,6 +82,10 @@ Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'Lokaltog/powerline'
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'carlosgaldino/elixir-snippets'
+
+
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
