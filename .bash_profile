@@ -56,3 +56,5 @@ source ~/.bashrc
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh ]]
 
+
+[[ -s /Users/leslie/.nvm/nvm.sh ]] && . /Users/leslie/.nvm/nvm.sh # This loads NVM

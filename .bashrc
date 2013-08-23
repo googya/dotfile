@@ -8,3 +8,5 @@ source ~/.profile
 
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 [[ -s "/Users/leslie/.jenv/bin/jenv-init.sh" ]] && source "/Users/leslie/.jenv/bin/jenv-init.sh" && source "/Users/leslie/.jenv/commands/completion.sh"
+#[[  -s "/Users/leslie/.bash/git-prompt.sh" ]] && source "/Users/leslie/.bash/git-prompt.sh"
+
