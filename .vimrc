@@ -86,6 +86,7 @@ Bundle 'bling/vim-airline'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'carlosgaldino/elixir-snippets'
 Bundle 'matthewsimo/angular-vim-ultisnips'
+Bundle 'christoomey/vim-tmux-navigator'
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
