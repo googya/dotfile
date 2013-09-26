@@ -22,7 +22,7 @@ set bs=2		" allow backspacing over everything in insert mode
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set autoread		" auto read when file is changed from outside
-
+set term=xterm
 
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
