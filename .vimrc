@@ -24,9 +24,6 @@ set ruler		" show the cursor position all the time
 set autoread		" auto read when file is changed from outside
 set term=xterm
 
-filetype on           " Enable filetype detection
-filetype indent on    " Enable filetype-specific indenting
-filetype plugin on    " Enable filetype-specific plugins
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
@@ -87,9 +84,17 @@ Bundle 'elixir-lang/vim-elixir'
 Bundle 'carlosgaldino/elixir-snippets'
 Bundle 'matthewsimo/angular-vim-ultisnips'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'derekwyatt/vim-scala'
+Bundle 'wting/rust.vim'
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
+
+
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
+
 
 
 syntax on		" syntax highlight
