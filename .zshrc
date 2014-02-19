@@ -37,7 +37,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/sbin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:$PATH
+export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/sbin:/usr/bin:/bin:/opt/X11/bin:$PATH
 
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 
