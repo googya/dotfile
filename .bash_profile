@@ -15,11 +15,10 @@ alias unshort='/usr/bin/ruby /Users/leslie/unshorten.rb'
 #export DYLD_LIBRARY_PATH="/usr/local/Cellar/mysql/5.5.20/lib:$DYLD_LIBRARY_PATH"
 
 #REDCAR="/Users/leslie/Gits/redcar/bin/"
-RUBIES="/Users/leslie/.rvm/rubies"
+RUBIES="$HOME/.rvm/rubies"
 HOMEBREW_SBIN="/usr/local/sbin"
 
 PATH=$HOMEBREW_SBIN:$RUBIES:$PATH; 
-export CLASSPATH=$CLASSPATH:/Users/leslie/java/class_path/jline.jar
 export PATH;
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
@@ -49,12 +48,6 @@ AUTOCONF_BIN="/usr/local/Cellar/autoconf/2.69/bin"
 PATH=$AUTOCONF_BIN:$PATH
 
 source ~/.bashrc
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # Load RVM into a shell session *as a function*
 
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 #[[ -s "/Users/leslie/.jenv/bin/jenv-init.sh" ]] && source "/Users/leslie/.jenv/bin/jenv-init.sh" && source "/Users/leslie/.jenv/commands/completion.sh"
-
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh ]]
-
-
-[[ -s /Users/leslie/.nvm/nvm.sh ]] && . /Users/leslie/.nvm/nvm.sh # This loads NVM

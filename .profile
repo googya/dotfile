@@ -9,5 +9,17 @@ export JAVA_HEADERS=/System/Library/Frameworks/JavaVM.framework/Versions/A/Heade
 export EDITOR=mate
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export BUNDLER_EDITOR=mate
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # Load RVM into a shell session *as a function*
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
+
+if [ -n "$ZSH_VERSION" ]; then
+  [[ -s `brew --prefix`/etc/autojump.zsh ]] && . `brew --prefix`/etc/autojump.zsh
+elif [ -n "BASH_VERSION" ]; then
+  [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+fi
+
+export PATH="$HOME/.rvm/gems/ruby-2.1.0/bin":$PATH
+
 alias ls='ls -v'
 [ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
