@@ -24,7 +24,7 @@ export PATH="$HOME/.rvm/gems/ruby-2.1.1/bin":$PATH
 alias ls='ls -v'
 [ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export ANDROID_HOME="$HOME/Applications/android/sdk"
 

@@ -39,7 +39,6 @@ fi
 #
 #export PROMPT_COMMAND="_update_ps1"
 
-PATH=/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:~/.cabal/bin:/usr/local/share/npm/bin/:$PATH
 #alias java6="export JAVA_HOME=`/usr/libexec/java_home -v1.6`"
 #alias java7="export JAVA_HOME=`/usr/libexec/java_home -v1.7`"
 #java6
@@ -51,3 +50,5 @@ source ~/.bashrc
 
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 #[[ -s "/Users/leslie/.jenv/bin/jenv-init.sh" ]] && source "/Users/leslie/.jenv/bin/jenv-init.sh" && source "/Users/leslie/.jenv/commands/completion.sh"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
