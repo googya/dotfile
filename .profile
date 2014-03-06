@@ -19,7 +19,13 @@ elif [ -n "BASH_VERSION" ]; then
   [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 fi
 
-export PATH="$HOME/.rvm/gems/ruby-2.1.0/bin":$PATH
+export PATH="$HOME/.rvm/gems/ruby-2.1.1/bin":$PATH
 
 alias ls='ls -v'
 [ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export ANDROID_HOME="$HOME/Applications/android/sdk"
+
+PATH=$ANDROID_HOME/tools:$ANDROID_HOME/build-tools:$PATH

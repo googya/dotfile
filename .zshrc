@@ -50,3 +50,5 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ -s "/Users/leslie/.jenv/bin/jenv-init.sh" ]] && source "/Users/leslie/.jenv/bin/jenv-init.sh" && source "/Users/leslie/.jenv/commands/completion.sh"
 
 source ~/.profile
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
