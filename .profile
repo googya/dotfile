@@ -26,5 +26,6 @@ alias ls='ls -v'
 
 export ANDROID_HOME="$HOME/Applications/android/sdk"
 
-PATH=$ANDROID_HOME/tools:$ANDROID_HOME/build-tools:$PATH
+PATH=/usr/local/bin:$HOME/bin:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools:$PATH
 export PATH="$HOME/.rvm/gems/ruby-2.1.1/bin":$PATH
+#[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
