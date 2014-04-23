@@ -52,3 +52,8 @@ source ~/.bashrc
 #[[ -s "/Users/leslie/.jenv/bin/jenv-init.sh" ]] && source "/Users/leslie/.jenv/bin/jenv-init.sh" && source "/Users/leslie/.jenv/commands/completion.sh"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Initialization for FDK command line tools.Wed Mar 26 09:29:41 2014
+FDK_EXE="/Users/leslie/bin/FDK/Tools/osx"
+PATH=${PATH}:"/Users/leslie/bin/FDK/Tools/osx"
+export PATH
+export FDK_EXE
