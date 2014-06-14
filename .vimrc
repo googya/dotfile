@@ -86,6 +86,7 @@ Bundle 'matthewsimo/angular-vim-ultisnips'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'wting/rust.vim'
+Bundle 'heartsentwined/vim-emblem'
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
