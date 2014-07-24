@@ -20,7 +20,7 @@ HOMEBREW_SBIN="/usr/local/sbin"
 
 PATH=$HOMEBREW_SBIN:$RUBIES:$PATH; 
 export PATH;
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+#export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 
 export CLICOLOR=1

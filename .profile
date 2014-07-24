@@ -37,3 +37,4 @@ export PATH
 export FDK_EXE
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+eval "$(pyenv init -)"
