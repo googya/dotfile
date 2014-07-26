@@ -35,7 +35,7 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/VisIncr'
 Bundle 'vim-scripts/matchit.zip'
-" Bundle 'ervandew/supertab'
+Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'vim-scripts/javacomplete'
 Bundle 'vgod/scala-vim-support'
@@ -56,7 +56,7 @@ Bundle 'tpope/vim-rvm'
 Bundle 'Lokaltog/vim-powerline'
 "Bundle 'myusuf3/numbers.vim'
 Bundle 'Shougo/neocomplcache'
-Bundle 'Townk/vim-autoclose'
+" Bundle 'Townk/vim-autoclose'
 "Bundle 'rson/vim-conque'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'vim-scripts/VimClojure'
@@ -98,7 +98,11 @@ filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
-
+" Enable basic mouse behavior such as resizing buffers
+set mouse=a
+if exists('$TMUX') " Support resizing in tmux
+   set ttymouse=xterm2
+endif
 
 syntax on		" syntax highlight
 set hlsearch		" search highlighting
@@ -379,8 +383,9 @@ endif
 let g:CommandTMaxHeight = 15
 
 " --- SuperTab
-let g:SuperTabDefaultCompletionType = "context"
+" let g:SuperTabDefaultCompletionType ="context"
 
+let g:SuperTabDefaultCompletionType = "<c-n>"
 " --- EasyMotion
 "let g:EasyMotion_leader_key = '<Leader>m' " default is <Leader>w
 hi link EasyMotionTarget ErrorMsg
@@ -445,3 +450,13 @@ au BufEnter *.hs compiler ghc
 let g:haddock_browser = "open"
 let g:haddock_browser_callformat = "%s %s"
 let g:ghc = "/usr/local/bin/ghc"
+
+
+" Fix Cursor in TMUX
+if exists('$TMUX')
+   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
