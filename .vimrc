@@ -33,7 +33,6 @@ Bundle 'Twinside/vim-cuteErrorMarker'
 Bundle 'msanders/snipmate.vim'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/VisIncr'
-Bundle 'vim-scripts/matchit.zip'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'vim-scripts/javacomplete'
@@ -86,7 +85,7 @@ Bundle 'matthewsimo/angular-vim-ultisnips'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'wting/rust.vim'
 Bundle 'heartsentwined/vim-emblem'
-Bundle  'valloric/youCompleteMe'
+" Bundle  'valloric/youCompleteMe'
 
 
 " auto reload vimrc when editing it
@@ -297,7 +296,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType java set omnifunc=javacomplete#Complete
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+" autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 " use syntax complete if nothing else available
 if has("autocmd") && exists("+omnifunc")
   autocmd Filetype *
