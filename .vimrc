@@ -45,7 +45,6 @@ Bundle 'vim-scripts/pythoncomplete'
 Bundle 'pangloss/vim-javascript'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'mileszs/ack.vim'
-Bundle 'tpope/vim-rails'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/VimClojure'
 Bundle 'jpalardy/vim-slime'
@@ -86,7 +85,7 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'wting/rust.vim'
 Bundle 'heartsentwined/vim-emblem'
 " Bundle  'valloric/youCompleteMe'
-
+Bundle 'vim-ruby/vim-ruby'
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
@@ -139,8 +138,8 @@ set tm=500
 
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
-   set softtabstop=3 
-   set shiftwidth=3 
+   set softtabstop=2 
+   set shiftwidth=2 
 
    au FileType Makefile set noexpandtab
 "}      							
