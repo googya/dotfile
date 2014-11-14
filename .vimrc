@@ -1,5 +1,4 @@
-" vgod's vimrc
-" Tsung-Hsiang (Sean) Chang <vgod@vgod.tw>
+
 " Fork me on GITHUB  https://github.com/vgod/vimrc
 
 " read https://github.com/vgod/vimrc/blob/master/README.md for more info
@@ -34,7 +33,6 @@ Bundle 'Twinside/vim-cuteErrorMarker'
 Bundle 'msanders/snipmate.vim'
 Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/VisIncr'
-Bundle 'vim-scripts/matchit.zip'
 Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'vim-scripts/javacomplete'
@@ -47,7 +45,6 @@ Bundle 'vim-scripts/pythoncomplete'
 Bundle 'pangloss/vim-javascript'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'mileszs/ack.vim'
-Bundle 'tpope/vim-rails'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/VimClojure'
 Bundle 'jpalardy/vim-slime'
@@ -56,7 +53,7 @@ Bundle 'tpope/vim-rvm'
 Bundle 'Lokaltog/vim-powerline'
 "Bundle 'myusuf3/numbers.vim'
 Bundle 'Shougo/neocomplcache'
-Bundle 'Townk/vim-autoclose'
+" Bundle 'Townk/vim-autoclose'
 "Bundle 'rson/vim-conque'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'vim-scripts/VimClojure'
@@ -83,9 +80,12 @@ Bundle 'bling/vim-airline'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'carlosgaldino/elixir-snippets'
 Bundle 'matthewsimo/angular-vim-ultisnips'
-Bundle 'christoomey/vim-tmux-navigator'
+" Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'wting/rust.vim'
+Bundle 'heartsentwined/vim-emblem'
+" Bundle  'valloric/youCompleteMe'
+Bundle 'vim-ruby/vim-ruby'
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
@@ -94,8 +94,6 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
-
-
 
 syntax on		" syntax highlight
 set hlsearch		" search highlighting
@@ -113,7 +111,9 @@ else
  "colors vgod
 endif
 
-set clipboard=unnamed	" yank to the system register (*) by default
+if $TMUX == ''
+   set clipboard=unnamed" yank to the system register (*) by default
+endif
 set showmatch		" Cursor shows matching ) and }
 set showmode		" Show current mode
 set wildchar=<TAB>	" start wild expansion in the command line using <TAB>
@@ -138,8 +138,8 @@ set tm=500
 
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
-   set softtabstop=3 
-   set shiftwidth=3 
+   set softtabstop=2 
+   set shiftwidth=2 
 
    au FileType Makefile set noexpandtab
 "}      							
@@ -295,7 +295,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType java set omnifunc=javacomplete#Complete
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+" autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 " use syntax complete if nothing else available
 if has("autocmd") && exists("+omnifunc")
   autocmd Filetype *
@@ -376,8 +376,9 @@ endif
 let g:CommandTMaxHeight = 15
 
 " --- SuperTab
-let g:SuperTabDefaultCompletionType = "context"
+" let g:SuperTabDefaultCompletionType ="context"
 
+let g:SuperTabDefaultCompletionType = "<c-n>"
 " --- EasyMotion
 "let g:EasyMotion_leader_key = '<Leader>m' " default is <Leader>w
 hi link EasyMotionTarget ErrorMsg
