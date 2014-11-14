@@ -1,0 +1,44 @@
+# 設定ファイルの探索をこのファイルで終わりにします
+root = true
+
+# 全てのファイルに適用する、デフォルトの設定
+[*]
+# 改行コードを LF にします (他に "crlf", "cr" が使えます)
+# 文字コードを utf-8 にします (他に "latin1", "utf-8-bom", "utf-16be", "utf-16le" が使えます)
+# 行末の余分なスペースを削除します
+# 最終行に空の行を追加します
+#
+# https://github.com/subosito/openshift-ruby/blob/master/.editorconfig
+#
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+
+[*.{html,js,rb,scss,xml}]
+indent_size = 2
+
+[Gemfile*]
+indent_size = 2
+
+[Rakefile]
+indent_size = 2
+
+
+# JS ファイルにのみ適用する設定
+[*.js]
+# インデントスタイルをタブにします
+# タブの幅を4文字分とします
+indent_style = tab
+tab_width = 2
+
+
+# Coffee ファイルのみ適用する設定
+[*.coffee]
+# インデントスタイルをスペースにします
+# インデント時に4つスペースを挿入します
+indent_style = space
+indent_size = 4
