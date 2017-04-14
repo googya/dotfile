@@ -18,7 +18,7 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 
 
-[*.{html,js,rb,scss,xml}]
+[*.{html,js,rb,scss,xml,erb}]
 indent_size = 2
 
 [Gemfile*]
@@ -41,4 +41,4 @@ tab_width = 2
 # インデントスタイルをスペースにします
 # インデント時に4つスペースを挿入します
 indent_style = space
-indent_size = 4
+indent_size = 2
