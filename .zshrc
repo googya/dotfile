@@ -75,3 +75,7 @@ export TWITTER_ACCESS_TOKEN="306021776-HxLgFXEP9BftKlk3cNUkri4Pux3OVKoIqVunMrvq"
 export TWITTER_ACCESS_TOKEN_SECRET="jokaQrowpCavAdlyRKQTaorZ4RLPcUXSCpCl9DP9vTZ01"
 fortune | cowsay | lolcat
 source $ZSH/oh-my-zsh.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
