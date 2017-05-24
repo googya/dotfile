@@ -1,0 +1,34 @@
+[user]
+	name = leslie.wen
+	email = xsw1024@gmail.com
+[core]
+	excludesfile = /Users/leslie/.gitignore_global
+	#editor = mate -w
+	editor = vim
+[difftool "sourcetree"]
+	cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+   st = status
+   co = checkout
+   cm = commit
+   pom = push origin master
+   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[help]
+	autocorrect = 1
+
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[color "status"]
+  changed = yellow
+  added = green
+  untracked = red
+
+[ghq]
+  root = ~/src
