@@ -1,5 +1,4 @@
 ZSH=$HOME/.oh-my-zsh
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -31,24 +30,48 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(brew git rbenv tmux tmuxinator osx)
 
 fpath=(/usr/local/share/zsh-completions $fpath)
-source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/sbin:/usr/bin:/bin:/opt/X11/bin:$PATH
 
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 
   alias subl='open -a Sublime\ Text\ 3'
   alias mate='open -a TextMate.app'
   alias mou='open -a Mou.app'
+  alias nrs='npm run server'
+  alias nrd='npm run deploy-dev'
+  alias nrt="npm run deploy-test"
+  alias cdd="bundle exec cap development deploy"
+  alias ctd="bundle exec cap testing deploy"
+  alias vsc="open -a Visual\ Studio\ Code.app"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-[[ -s "/Users/leslie/.jenv/bin/jenv-init.sh" ]] && source "/Users/leslie/.jenv/bin/jenv-init.sh" && source "/Users/leslie/.jenv/commands/completion.sh"
-
 source ~/.profile
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+# export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
+
+
+# autoload -U add-zsh-hook
+# load-nvmrc() {
+#   if [[ -f .nvmrc && -r .nvmrc ]]; then
+#     nvm use
+#   elif [[ $(nvm version) != $(nvm version default)  ]]; then
+#     nvm use default
+#   fi
+# }
+# add-zsh-hook chpwd load-nvmrc
+# load-nvmrc
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export TWITTER_CONSUMER_KEY="fcBOrOpkAlW9Hd0zMJWJmNH9Y"
+export TWITTER_CONSUMER_SECRET="7hazATx7pbfqTYchOvVHcnAdAHWbjXKyv7njVLSrSO2XiHTen5"
+export TWITTER_ACCESS_TOKEN="306021776-HxLgFXEP9BftKlk3cNUkri4Pux3OVKoIqVunMrvq"
+export TWITTER_ACCESS_TOKEN_SECRET="jokaQrowpCavAdlyRKQTaorZ4RLPcUXSCpCl9DP9vTZ01"
+fortune | cowsay | lolcat
+source $ZSH/oh-my-zsh.sh
