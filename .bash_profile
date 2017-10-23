@@ -18,8 +18,7 @@ alias unshort='/usr/bin/ruby /Users/leslie/unshorten.rb'
 RUBIES="$HOME/.rvm/rubies"
 HOMEBREW_SBIN="/usr/local/sbin"
 
-PATH=$HOMEBREW_SBIN:$RUBIES:$PATH; 
-export PATH;
+PATH=$HOMEBREW_SBIN:$RUBIES:$PATH; ;
 #export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 
@@ -52,7 +51,8 @@ source ~/.bashrc
 #[[ -s "/Users/leslie/.jenv/bin/jenv-init.sh" ]] && source "/Users/leslie/.jenv/bin/jenv-init.sh" && source "/Users/leslie/.jenv/commands/completion.sh"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-# Initialization for FDK command line tools.Wed Mar 26 09:29:41 2014
+="$HOME/.cargo/bin:$PATH"
+# Initialization for FDK command line tools.Tue Aug 29 18:44:55 2017
 FDK_EXE="/Users/leslie/bin/FDK/Tools/osx"
 PATH=${PATH}:"/Users/leslie/bin/FDK/Tools/osx"
 export PATH

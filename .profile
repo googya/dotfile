@@ -1,15 +1,12 @@
 export GOPATH=/usr/local/opt/bin
 export PATH=$PATH:$GOPATH:$GOPATH/bin
-export EDITOR=atom
+export EDITOR=vim
 
 # export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export JAVA_HEADERS=/System/Library/Frameworks/JavaVM.framework/Versions/A/Headers
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export BUNDLER_EDITOR=vim
-
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
 
 alias ls='ls -v'
 alias e='emacsclient -t'
@@ -25,14 +22,15 @@ alias gbc='git for-each-ref --format="%(committerdate) %09 %(authorname) %09 %(r
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
 alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
+alias dtr="npm run test:deploy"
 
-[ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
+alias ddj="npm run dev:deploy"
+
+# [ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
 
 
-PATH=$HOME/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:~/.cabal/bin:/usr/local/share/npm/bin:$PATH
+# PATH=$HOME/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:~/.cabal/bin:/usr/local/share/npm/bin:$PATH
 PATH=~/.cargo/bin:$PATH
-# Initialization for FDK command line tools.Wed Mar 26 09:29:41 2014
-export PATH
 export OPENSSL_LIB_DIR="/usr/local/opt/openssl/lib"
 export OPENSSL_INCLUDE_DIR="/usr/local/opt/openssl/include"
 
@@ -41,12 +39,13 @@ if [ -n "$ZSH_VERSION" ]; then
 elif [ -n "BASH_VERSION" ]; then
   [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 fi
-export SSLKEYLOGFILE=~/sslkeylog.log
-export PATH="$HOME/.cargo/bin:$PATH"
+export SSLKEYLOGFILE=~/sslkeylog.log="$HOME/.cargo/bin:$PATH"
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
-
-export ANDROID_HOME=${HOME}/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+# Initialization for FDK command line tools.Tue Aug 29 18:44:55 2017
+export ANDROID_HOME=~/android_sdk
+export PATH=~/android_sdk/tools:$PATH
+export PATH=~/android_sdk/platform-tools:$PATH
+export PATH=~/bin:$PATH
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM

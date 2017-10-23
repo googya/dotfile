@@ -47,6 +47,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
   alias cdd="bundle exec cap development deploy"
   alias ctd="bundle exec cap testing deploy"
   alias vsc="open -a Visual\ Studio\ Code.app"
+  alias ivsc="open -a Visual\ Studio\ Code\ -\ Insiders.app"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.profile
@@ -73,9 +74,14 @@ export TWITTER_CONSUMER_KEY="fcBOrOpkAlW9Hd0zMJWJmNH9Y"
 export TWITTER_CONSUMER_SECRET="7hazATx7pbfqTYchOvVHcnAdAHWbjXKyv7njVLSrSO2XiHTen5"
 export TWITTER_ACCESS_TOKEN="306021776-HxLgFXEP9BftKlk3cNUkri4Pux3OVKoIqVunMrvq"
 export TWITTER_ACCESS_TOKEN_SECRET="jokaQrowpCavAdlyRKQTaorZ4RLPcUXSCpCl9DP9vTZ01"
-fortune | cowsay | lolcat
 source $ZSH/oh-my-zsh.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+
+export ANDROID_HOME=${HOME}/android_sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
