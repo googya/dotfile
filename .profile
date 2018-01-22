@@ -19,6 +19,7 @@ alias ghqlist='cd $(ghq list -p | peco)'
 alias wuzz="$GOPATH/bin/wuzz"
 alias fuck='$(thefuck $(fc -ln -1))'
 alias gbc='git for-each-ref --format="%(committerdate) %09 %(authorname) %09 %(refname)" | sort -k5n -k2M -k3n -k4n'
+alias gb='git --no-pager branch'
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
 alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
