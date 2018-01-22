@@ -9,8 +9,8 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export BUNDLER_EDITOR=vim
 
 alias ls='ls -v'
-alias e='emacsclient -t'
-alias ec='emacsclient -c'
+alias e='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t'
+alias ec='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c'
 alias bu='brew update'
 alias bg='brew upgrade'
 alias bcp='brew cleanup'
@@ -22,14 +22,9 @@ alias gbc='git for-each-ref --format="%(committerdate) %09 %(authorname) %09 %(r
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
 alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
-alias dtr="npm run test:deploy"
+alias deploy_test_ios="npm run test:deploy-ios"
+alias deploy_test_and="npm run test:deploy-android"
 
-alias ddj="npm run dev:deploy"
-
-# [ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
-
-
-# PATH=$HOME/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:~/.cabal/bin:/usr/local/share/npm/bin:$PATH
 PATH=~/.cargo/bin:$PATH
 export OPENSSL_LIB_DIR="/usr/local/opt/openssl/lib"
 export OPENSSL_INCLUDE_DIR="/usr/local/opt/openssl/include"
@@ -44,8 +39,12 @@ export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 
 # Initialization for FDK command line tools.Tue Aug 29 18:44:55 2017
-export ANDROID_HOME=~/android_sdk
+#export ANDROID_HOME=~/android_sdk
+export ANDROID_HOME=~/Library/Android/sdk/
+export ANDROID_SDK_ROOT=$ANDROID_HOME
 export PATH=~/android_sdk/tools:$PATH
 export PATH=~/android_sdk/platform-tools:$PATH
 export PATH=~/bin:$PATH
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"

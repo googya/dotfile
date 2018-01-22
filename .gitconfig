@@ -1,12 +1,13 @@
 [user]
 	name = leslie.wen
-	email = xsw1024@gmail.com
+	email = xsw1024@yeah.net
 [core]
 	excludesfile = /Users/leslie/.gitignore_global
 	#editor = mate -w
 	editor = vim
+	pager = less -+F -+X
 [difftool "sourcetree"]
-	cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$LOCAL\" \"$REMOTE\"
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
