@@ -21,7 +21,7 @@ set bs=2		" allow backspacing over everything in insert mode
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set autoread		" auto read when file is changed from outside
-set term=xterm
+"set term=xterm
 
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
@@ -86,6 +86,11 @@ Bundle 'wting/rust.vim'
 Bundle 'heartsentwined/vim-emblem'
 " Bundle  'valloric/youCompleteMe'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'rust-lang/rust.vim'
+Bundle 'racer-rust/vim-racer'
+Bundle 'rhysd/vim-crystal'
+Bundle 'udalov/kotlin-vim'
+Bundle 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh' }
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
@@ -358,7 +363,6 @@ let g:tex_flavor='latex'
 " --- AutoClose - Inserts matching bracket, paren, brace or quote 
 " fixed the arrow key problems caused by AutoClose
 if !has("gui_running")	
-   set term=linux
    imap OA <ESC>ki
    imap OB <ESC>ji
    imap OC <ESC>li
@@ -443,3 +447,5 @@ au BufEnter *.hs compiler ghc
 let g:haddock_browser = "open"
 let g:haddock_browser_callformat = "%s %s"
 let g:ghc = "/usr/local/bin/ghc"
+
+let g:racer_cmd = "~/.cargo/bin/racer"
